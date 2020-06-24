@@ -64,6 +64,10 @@ h4 {
   font-size: 3rem;
 }
 
+.heading--3 {
+  font-size: 2.5rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -111,8 +115,8 @@ ul {
 
 .nav__list-item a {
   color: var(--color-dark-blue);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav__list-item a:hover {
@@ -172,8 +176,8 @@ ul {
   border-radius: 2px;
   border: 1px solid transparent;
   cursor: pointer;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .intro__content-form--btn:hover {
@@ -256,9 +260,9 @@ ul {
   text-decoration: none;
   border-bottom: 1px solid var(--color-cyan);
   color: var(--color-cyan);
-  margin: 3rem 0;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  margin: 5rem 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .cta span {
@@ -266,7 +270,7 @@ ul {
 }
 
 .cta img {
-  width: 2rem;
+  width: 3rem;
 }
 
 .cta:hover {
@@ -316,5 +320,73 @@ ul {
 
 .text-muted {
   color: var(--color-gray);
+}
+
+.access {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  grid-column: 1 / -1;
+  color: var(--color-white);
+  background-color: var(--color-gray-blue);
+  padding: 5rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr (minmax(min-content, 15rem))[8] 1fr 1fr;
+      grid-template-columns: 1fr 1fr repeat(8, minmax(-webkit-min-content, 15rem)) 1fr 1fr;
+      grid-template-columns: 1fr 1fr repeat(8, minmax(min-content, 15rem)) 1fr 1fr;
+}
+
+.access .grid {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3 / 11;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.access__content {
+  width: 40%;
+}
+
+.access__form {
+  width: 40%;
+  margin-left: auto;
+}
+
+.access__form input {
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.access__form-email {
+  padding: 1rem 2rem;
+  display: block;
+  width: 80%;
+  margin: 1.5rem 0;
+}
+
+.access__form-email:focus {
+  border-color: var(--color-cyan);
+}
+
+.access__form-btn {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  color: #fff;
+  background: var(--color-bright-blue);
+  border-color: transparent;
+}
+
+.access__form-btn:hover {
+  background-color: #1246d3;
 }
 /*# sourceMappingURL=style.css.map */

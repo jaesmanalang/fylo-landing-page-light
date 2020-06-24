@@ -291,7 +291,7 @@ ul {
     &-email {
       padding: 1rem 2rem;
       display: block;
-      width: 80%;
+      width: 100%;
       margin: 1.5rem 0;
 
       &:focus {
@@ -311,6 +311,104 @@ ul {
 
       &:hover {
         background-color: hsl(224, 84%, 45%);
+      }
+    }
+  }
+}
+
+.footer {
+  grid-row: 6 / 7;
+  grid-column: 1 / -1;
+  color: var(--color-white);
+  background-color: var(--color-dark-blue);
+  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr repeat(8, minmax(min-content, 15rem)) 1fr 1fr;
+
+  a {
+    color: var(--color-white);
+  }
+  .grid {
+    grid-column: 3 / 11;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  &__logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    img {
+      max-width: 100%;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &__contact {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    &-phone,
+    &-email {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 2rem;
+      }
+    }
+
+    // &-email {
+    // }
+  }
+
+  &__nav {
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 2rem;
+
+    ul {
+      margin: 0 auto;
+
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          &:hover {
+            text-decoration: underline;
+            color: var(--color-cyan);
+          }
+        }
+      }
+    }
+  }
+
+  &__social-media {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    margin: 0 auto;
+
+    a {
+      text-align: center;
+      display: inline-block;
+      padding: 0.5rem;
+      width: 3.5rem;
+      height: auto;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      margin: 0 1rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-2px);
+        color: var(--color-cyan);
+        border-color: var(--color-cyan);
       }
     }
   }

@@ -4,6 +4,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  z-index: 100;
+
+  @media only screen and(max-width: 600px) {
+    margin-bottom: 5rem;
+  }
 
   .logo {
     width: 10rem;
@@ -87,6 +92,10 @@
           margin-bottom: 2rem;
         }
 
+        @media only screen and(max-width: 600px) {
+          width: 100%;
+        }
+
         &:focus {
           border-color: var(--color-cyan);
         }
@@ -106,6 +115,10 @@
           width: 75%;
         }
 
+        @media only screen and(max-width: 600px) {
+          width: 100%;
+        }
+
         &:hover {
           background-color: hsl(224, 84%, 45%);
         }
@@ -117,12 +130,29 @@
     width: 50%;
 
     @media only screen and (max-width: 768px) {
-      width: 75%;
+      width: 60%;
       margin-bottom: 5rem;
+      margin-top: 10rem;
     }
+
+    @media only screen and(max-width: 600px) {
+      width: 90%;
+      margin-top: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media only screen and (max-height: 450px) {
+      width: 50%;
+    }
+
+
 
     img {
       max-width: 100%;
+
+      @media only screen and (max-height: 450px) {
+        max-width: 70%;
+      }
     }
   }
 }
@@ -131,6 +161,14 @@
   grid-row: 3 / 4;
   grid-column: 1 / -1;
   margin-top: 2rem;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 10rem;
+  }
+
+  @media only screen and(max-width: 600px) {
+    margin-top: 20rem;
+  }
 
   img {
     width: 100%;
@@ -176,6 +214,10 @@
         width: 80%;
         margin: 1rem auto;
       }
+
+      @media only screen and(max-width: 600px) {
+        width: 100%;
+      }
     }
 
     h2 {
@@ -195,6 +237,10 @@
       margin-bottom: 3rem;
     }
 
+    @media only screen and(max-width: 600px) {
+      width: 100%;
+    }
+
     img {
       max-width: 100%;
     }
@@ -208,6 +254,10 @@
   width: 35rem;
   border-radius: 5px;
   box-shadow: 1px 1px 3px 2px rgb(238, 238, 238);
+
+  @media only screen and(max-width: 600px) {
+    width: 100%;
+  }
 
   &__text {
     line-height: 1.6;
@@ -255,6 +305,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr repeat(8, minmax(min-content, 15rem)) 1fr 1fr;
 
+  h3 {
+    margin-bottom: 2rem;
+  }
+
   .grid {
     grid-column: 3 / 11;
     padding: 2rem;
@@ -275,6 +329,10 @@
       width: 80%;
       text-align: center;
     }
+
+    @media only screen and(max-width: 600px) {
+      width: 100%;
+    }
   }
 
   &__form {
@@ -284,6 +342,10 @@
     @media only screen and (max-width: 768px) {
       width: 80%;
       margin: 1rem 0;
+    }
+
+    @media only screen and(max-width: 600px) {
+      width: 100%;
     }
 
     input {
@@ -311,6 +373,10 @@
       color: #fff;
       background: var(--color-bright-blue);
       border-color: transparent;
+
+      @media only screen and(max-width: 600px) {
+        width: 100%;
+      }
 
       &:hover {
         background-color: hsl(224, 84%, 45%);
@@ -347,6 +413,11 @@
       margin: 0 2rem;
     }
 
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 2rem;
+    }
+
   }
 
   &__logo {
@@ -356,6 +427,10 @@
 
     @media only screen and (max-width: 768px) {
       justify-self: center;
+    }
+
+    @media only screen and(max-width: 600px) {
+      justify-self: start;
     }
 
 
@@ -377,12 +452,21 @@
       grid-column: 1 / 4;
     }
 
+    @media only screen and(max-width: 600px) {
+      // flex-direction: column;
+      display: block;
+    }
+
     &-phone,
     &-email {
       margin-bottom: 1rem;
 
       @media only screen and (max-width: 768px) {
         margin: 1rem 2rem;
+      }
+
+      @media only screen and(max-width: 600px) {
+        margin: 2rem 0;
       }
 
       display: flex;
@@ -410,8 +494,18 @@
       grid-column: 2 / 3;
     }
 
+    @media only screen and(max-width: 600px) {
+      grid-column: 1 / 2;
+      margin-bottom: 2rem;
+    }
+
+
     ul {
       margin: 0 auto;
+
+      @media only screen and(max-width: 600px) {
+        margin: 0;
+      }
 
       li {
         margin-bottom: 1rem;
@@ -422,6 +516,18 @@
             color: var(--color-cyan);
           }
         }
+      }
+    }
+
+    &-list--1 {
+      @media only screen and(max-width: 600px) {
+        grid-row: 1 / 2;
+      }
+    }
+
+    &-list--2 {
+      @media only screen and(max-width: 600px) {
+        grid-row: 2 / 3;
       }
     }
   }
